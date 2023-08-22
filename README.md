@@ -60,6 +60,22 @@ For compatibility with older Strapi versions please use older Versions of this p
 
 Enable the fuzzy-search plugin in the `./config/plugins.js` of your Strapi project.
 
+```JavaScript
+module.exports = ({ env }) => ({
+  // ...
+
+  "fuzzy-search": {
+    enabled: true,
+    config: {
+      contentTypes: [],
+    },
+  },
+
+  // ...
+});
+
+```
+
 Make sure to set the appropriate permissions for the `search` route in the `Permissions` tab of the `Users & Permission Plugin` for the role to be able to access the search route.
 
 ## Options/Config
